@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html translate="no" data-dpr="1" style="font-size: 48.24px;">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex,nofollow">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <title>Winzo Club</title>
+    <link href="/css/promotion/app.css" rel="stylesheet" />
+    <link href="/css/promotion/chunk-0_1.css" rel="stylesheet" />
+    <link href="/css/promotion/chunk-0_2.css" rel="stylesheet" />
+    <link href="/css/promotion/chunk-0_3.css" rel="stylesheet" />
+    <link href="/css/promotion/chunk-0_4.css" rel="stylesheet" />
+    <link href="/css/promotion/chunk-0_5.css" rel="stylesheet" />
+    <link href="/css/promotion/chunk-0_6.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/images/bitbug_favicon.ico" type="image/x-icon">
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #090909;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body style="font-size: 12px;">
+    <div id="app">
+        <div data-v-7c8bbbf4="" class="mian">
+            <div data-v-106b99c8="" data-v-7c8bbbf4="" class="navbar">
+                <div data-v-106b99c8="" class="navbar-left" onclick="location.href='/home'">
+                    <div data-v-a9660e98="" data-v-106b99c8="" class="c-row c-row-middle-center">
+                        <i class="fa-light fa-angle-left fa-fade fa-xl center" style="color: #FFF"></i>
+                    </div>
+                </div>
+                <div data-v-106b99c8="" class="navbar-title"> Promotion </div>
+                <div data-v-106b99c8="" class="navbar-right" onclick="location.href='/promotion/bonusrecord'">
+                    <div data-v-7c8bbbf4="" data-v-106b99c8="" class="c-row">
+                        <i class="fa-duotone fa-calendar-lines fa-fade fa-lg"
+                            style="--fa-primary-color: #fff; --fa-secondary-color: #fff;"></i>
+                    </div>
+                </div>
+            </div>
+            <div data-v-7c8bbbf4="" class="promotion">
+                <div data-v-7c8bbbf4="" class="tab">
+                    <ul data-v-7c8bbbf4="" class="c-row c-row-between">
+                        <li data-v-7c8bbbf4="" onclick="location.href='/promotion'" class="action block-click">Data</li>
+                        <li data-v-7c8bbbf4="" onclick="location.href='/promotion/myTeam'">My Team</li>
+                        <li data-v-7c8bbbf4="" onclick="location.href='/promotion/promotionDes'">History</li>
+                        <li data-v-7c8bbbf4="" onclick="location.href='/promotion/tutorial'">Tutorial</li>
+                    </ul>
+                </div>
+                <div data-v-7c8bbbf4="" class="box">
+                    <div data-v-7c8bbbf4="" class="tit">My Reward</div>
+                    <div data-v-7c8bbbf4="" class="info">
+                        <div data-v-7c8bbbf4="" class="info-data c-row c-row-between m-b-20">
+                            <div data-v-7c8bbbf4="" class="left">
+                                <h5 data-v-7c8bbbf4="" class="all" style="font-size: 12px"> Today's Total Commission
+                                </h5>
+                                <p data-v-7c8bbbf4="" class="num" id="roses_today">0</p>
+                                <p data-v-7c8bbbf4="" class="txt" id="roses_f1">Direct Commission: 0</p>
+                                <p data-v-7c8bbbf4="" class="txt" id="roses_f">Team Commission: 0</p>
+                            </div>
+                            <div data-v-7c8bbbf4="" class="right">
+                                <p data-v-7c8bbbf4="" class="txt">Total Referrals: <span data-v-7c8bbbf4="" class="num"
+                                        id="f1">0</span></p>
+                                <p data-v-7c8bbbf4="" class="txt">Total Members: <span data-v-7c8bbbf4="" class="num"
+                                        id="f_total">0</span></p>
+                                <!-- <p data-v-7c8bbbf4="" class="txt">New Members Today: <span data-v-7c8bbbf4=""
+                                        class="num" id="f1_today">0</span></p>
+                                <p data-v-7c8bbbf4="" class="txt">New Total Members For The Day: <span
+                                        data-v-7c8bbbf4="" class="num" id="f_all_today">0</span></p> -->
+                                <!--    <p data-v-7c8bbbf4="" class="txt">Total Commission For The Week: <span data-v-7c8bbbf4=""
+                                        class="num">0</span></p> -->
+                                <p data-v-7c8bbbf4="" class="txt" roses_f>Total Commission: <span data-v-7c8bbbf4=""
+                                        class="num" id="roses_all">0</span></p>
+                            </div>
+                        </div>
+                        <div data-v-7c8bbbf4="" class="info-img c-row c-row-between">
+                            <div data-v-7c8bbbf4="" class="img" id="img">
+                                <div data-v-7c8bbbf4="" id="qrcode" title="">
+                                    <canvas id="canvas" width="145" height="145" style="display: none;"></canvas>
+                                </div>
+                                <div data-v-7c8bbbf4="" class="c-tc">Long Press To Save QR Code</div>
+                            </div>
+                            <div data-v-7c8bbbf4="" class="btn-list c-row c-row-middle-center">
+                                <div data-v-7c8bbbf4="" class="btn-box">
+                                    <div data-v-7c8bbbf4="" class="btn m-b-10 c-row c-row-middle-center tag-read"
+                                        data-clipboard-text="">Copy Invitation Code</div>
+                                    <div data-v-7c8bbbf4="" data-clipboard-text=""
+                                        class="btn m-b-10 c-row c-row-middle-center tag-read">Copy Link</div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div>
+                            <center style="font-size: 20px;">Invite Link:</center> <span contenteditable="true" style="display: flex; justify-content: center; border-radius: 0.26667rem; border: 0.04rem solid #F3C300; padding
+                        : 10px 0px;" id='invite_code'></span>
+                            <center><button style="
+                    display: inline-block;
+                    outline: none;
+                    cursor: pointer;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 600;
+                    padding: 7px 12px;
+                    border: none; 
+                    margin-top:4px;
+                    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+                    background: -webkit-linear-gradient(top,#FAE59F 0%,#C4933F 100%);
+                    background: linear-gradient(180deg,#FAE59F 0%,#C4933F 100%);
+                    box-shadow: 0 0.10667rem 0.32rem #8f5206;
+                    border-radius: 0.26667rem;
+                    color: #fff;
+                " onclick="copy('#invite_code')">Copy</button></center>
+                        </div>
+                    </div>
+                </div>
+                <div data-v-7c8bbbf4="" class="tit c-row c-row-between">Referral Condition For Level Commission</div>
+                <div data-v-7c8bbbf4="" class="table">
+                    <div data-v-7c8bbbf4="" class="hd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Total Levels</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Referrals</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Commission</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Recharge</div>
+                    </div>
+
+                    <div data-v-7c8bbbf4="" class="bd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Level 1</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">2</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">1%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">600</div>
+                    </div>
+                    <div data-v-7c8bbbf4="" class="bd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Level 2</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">5</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">0.25%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">1500</div>
+                    </div>
+                    <div data-v-7c8bbbf4="" class="bd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Level 3</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">8</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">0.25%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">2400</div>
+                    </div>
+                    <div data-v-7c8bbbf4="" class="bd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Level 4</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">11</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">0.25%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">3300</div>
+                    </div>
+                    <div data-v-7c8bbbf4="" class="bd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Level 5</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">14</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">0.25%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">4200</div>
+                    </div>
+                    <div data-v-7c8bbbf4="" class="bd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Level 6</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">17</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">0.25%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">5100</div>
+                    </div>
+                    <div data-v-7c8bbbf4="" class="bd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Level 7</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">20</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">0.25%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">6000</div>
+                    </div>
+                    <div data-v-7c8bbbf4="" class="bd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Level 8</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">23</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">0.25%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">6900</div>
+                    </div>
+                    <div data-v-7c8bbbf4="" class="bd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Level 9</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">26</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">0.25%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">7800</div>
+                    </div>
+                    <div data-v-7c8bbbf4="" class="bd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Level 10</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">29</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">0.5%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">8700</div>
+                    </div>
+                    <div data-v-7c8bbbf4="" class="bd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Level 11</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">32</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">0.5%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">9600</div>
+                    </div>
+                    <div data-v-7c8bbbf4="" class="bd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Level 12</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">35</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">0.5%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">10500</div>
+                    </div>
+                    <div data-v-7c8bbbf4="" class="bd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Level 13</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">38</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">0.5%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">11400</div>
+                    </div>
+                    <div data-v-7c8bbbf4="" class="bd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Level 14</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">41</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">0.5%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">12300</div>
+                    </div>
+                    <div data-v-7c8bbbf4="" class="bd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Level 15</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">44</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">0.5%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--6">13200</div>
+                    </div>
+                </div>
+                <!--    <div data-v-7c8bbbf4="" class="tit c-row c-row-between m-t-15">How to calculate commission</div>
+                    <div data-v-7c8bbbf4="" class="table">
+                        <div data-v-7c8bbbf4="" class="box" style="width: 420px;">
+                            <div data-v-7c8bbbf4="" class="hd dl van-row">
+                                <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">
+                                   Levels<p data-v-7c8bbbf4="" class="txt">Rebate ratio</p>
+                                </div>
+                                <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--4">
+                                    Tier 1<p data-v-7c8bbbf4="" class="txt">Commission</p>
+                                </div>
+                                <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--4">
+                                    Referral<p data-v-7c8bbbf4="" class="txt">Condition</p>
+                                </div>
+                                <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--5">
+                                    Tier 3<p data-v-7c8bbbf4="" class="txt">Commission</p>
+                                </div>
+                                <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--5">
+                                    Tier 4<p data-v-7c8bbbf4="" class="txt">Commission</p>
+                                </div> 
+                            </div> -->
+                <!-- </div>
+                    </div> -->
+            </div>
+        </div>
+        <!---->
+        <%- include('../nav') -%>
+            <div data-v-7692a079="" data-v-3966082f="" class="Loading c-row c-row-middle-center">
+                <div data-v-7692a079="" class="van-loading van-loading--circular">
+                    <span data-v-7692a079="" class="van-loading__spinner van-loading__spinner--circular"
+                        style="width: auto; height: auto; -webkit-animation-duration: 1s; animation-duration: 1s;">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 200 200" width="200" height="200" preserveAspectRatio="xMidYMid meet"
+                            style="width: 100%;height: 100%;transform: translate3d(0px, 0px, 0px);content-visibility: visible;">
+                            <g transform="matrix(-0.5984085202217102,0.8011911511421204,-0.8011911511421204,-0.5984085202217102,239.9599609375,79.72173309326172)"
+                                style="display: block;">
+                                <image width="200px" height="200px" preserveAspectRatio="xMidYMid slice"
+                                    xlink:href="/index_files/loadingspinner.png"></image>
+                            </g>
+                            <g transform="matrix(0.9408400058746338,0,0,0.9408400058746338,20.969436645507812,79.30152130126953)"
+                                style="display: block;">
+                                <image width="168px" height="44px" preserveAspectRatio="xMidYMid slice"
+                                    xlink:href="/index_files/h5setting_202401100608011fs2.png"></image>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/qr.js"></script>
+    <script src="/js/client.js"></script>
+    <script>
+        $(document).ready(function () {
+            function alertMess(text, sic) {
+                $('body').append(
+                    `
+					<div data-v-1dcba851="" class="msg">
+						<div data-v-1dcba851="" class="msg-content v-enter-active v-enter-to" style=""> ${text} </div>
+					</div>
+					`
+                );
+                setTimeout(() => {
+                    $('.msg .msg-content').removeClass('v-enter-active v-enter-to');
+                    $('.msg .msg-content').addClass('v-leave-active v-leave-to');
+                    setTimeout(() => {
+                        $('.msg').remove();
+                    }, 100);
+                    sic.removeClass('block-click');
+                }, 1000);
+            }
+            $('.btn-box .btn').click(function (e) {
+                e.preventDefault();
+                $(this).addClass('block-click');
+                alertMess('Copy successful', $(this));
+                navigator.clipboard.writeText($(this).attr('data-clipboard-text'));
+            });
+        });
+    </script>
+    <script>
+        function RosesRender(datas) {
+            let html = datas.map((e) => {
+                let html = '';
+                return html += `<div data-v-7c8bbbf4="" class="bd van-row">
+                        <div data-v-7c8bbbf4="" class="c-tc van-ellipsis van-col van-col--6">Lvl ${e.level}</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--4">${e.f1}%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--4">${e.f2}%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--5">${e.f3}%</div>
+                        <div data-v-7c8bbbf4="" class="c-tc van-col van-col--5">${e.f4}%</div>
+                    </div>`;
+            });
+            $('.table:eq(1) .box').append(html);
+
+            $('.table:eq(1) .box').append(`
+                <div data-v-7c8bbbf4="" class="bd van-row">
+                    <div data-v-7c8bbbf4="" class="c-tc fw van-col van-col--6">...</div>
+                    <div data-v-7c8bbbf4="" class="c-tc fw van-col van-col--4">...</div>
+                    <div data-v-7c8bbbf4="" class="c-tc fw van-col van-col--4">...</div>
+                    <div data-v-7c8bbbf4="" class="c-tc fw van-col van-col--5">...</div>
+                    <div data-v-7c8bbbf4="" class="c-tc fw van-col van-col--5">...</div>
+                </div>
+                `);
+        }
+        $.ajax({
+            type: "POST",
+            url: "/api/webapi/promotion",
+            data: {
+
+            },
+            dataType: "json",
+            success: function (response) {
+                $('.Loading').fadeOut(0);
+                $('#f1').text(response.invite.f1);
+                $('#f1_today').text(response.invite.f1_today);
+                const f1Count =response.invite.f1_today;
+                console.log(f1Count);
+                $('#f_all_today').text(response.invite.f_all_today);
+                $('#f_total').text(response.invite.total_f);
+
+                $('#roses_f1').text("Direct Commission: " + response.invite.roses_f1);
+                $('#roses_f').text("Team Commission: " + response.invite.roses_f);
+                $('#roses_all').text(response.invite.roses_all);
+                $('#roses_today').text(response.invite.roses_today);
+                $('#invite_code').text(window.location.hostname + `/register?r_code=${response.info[0].code}`);
+
+                if (response.status === false) return location.href = '/home';
+                RosesRender(response.level);
+                $('.btn-box .btn:eq(0)').attr('data-clipboard-text', response.info[0].code);
+                $('.btn-box .btn:eq(1)').attr('data-clipboard-text', window.location.hostname + `/register?r_code=${response.info[0].code}`);
+                var qrcode = new QRCode("qrcode");
+                $('#qrcode').attr('title', window.location.hostname + `/register?r_code=${response.info[0].code}`)
+                function makeCode() {
+                    qrcode.makeCode(window.location.hostname + `/register?r_code=${response.info[0].code}`);
+                }
+
+                makeCode();
+            }
+        });
+
+        function copy(selector) {
+            var $temp = $("<div>");
+            $("body").append($temp);
+            $temp.attr("contenteditable", true)
+                .html($(selector).html()).select()
+                .on("focus", function () { document.execCommand('selectAll', false, null); })
+                .focus();
+            document.execCommand("copy");
+            $temp.remove();
+        }
+    </script>
+    <!-- <script>
+        var limit = 15;
+        var start = 0;
+        var action = 'inactive';
+        function load_country_data(limit, start) {
+            $.ajax({
+                url: "/api/webapi/promotion",
+                method: "POST",
+                data: {
+                    limit: limit,
+                    start: start
+                },
+                cache: false,
+                success: function(data) {
+                    if (giai_doan == '') {
+                        $('.van-list__finished-text').text("No more data");
+                        action = 'active';
+                    } else {
+                        $('.van-list__finished-text').html('<div data-v-7d40872f="" class="order-content"><div role="feed" class="van-list" aria-busy="true"><div class="van-list__loading"><div class="van-loading van-loading--circular"><span class="van-loading__spinner van-loading__spinner--circular" style="width: 16px; height: 16px;"><svg viewBox="25 25 50 50" class="van-loading__circular"><circle cx="50" cy="50" r="20" fill="none"></circle></svg></span><span class="van-loading__text">Loading...</span></div></div><div class="van-list__placeholder"></div></div></div>');
+                        action = "inactive";
+                    }
+                }
+            });
+        }
+        if (action == 'inactive') {
+            action = 'active';
+            load_country_data(limit, start);
+        }
+        $(window).scroll(function() {
+            if ($(window).scrollTop() + $(window).height() > $(".main").height() && action == 'inactive') {
+                action = 'active';
+                start = start + limit;
+                setTimeout(function() {
+                    load_country_data(limit, start);
+                }, 1200);
+            }
+        });
+    </script> -->
+</body>
+
+</html>
