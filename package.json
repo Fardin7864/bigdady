@@ -8,7 +8,7 @@
         "database": "nodemon --exec ./node_modules/.bin/babel-node src/modal/CreateDatabase.js",
         "start": "node dist/server.js",
         "dev": "babel-node src/server.js",
-        "build": "babel src -d dist"
+        "build": "babel src -d src/dist"
     },
     "author": "",
     "license": "ISC",
